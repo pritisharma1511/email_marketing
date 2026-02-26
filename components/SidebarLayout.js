@@ -68,8 +68,8 @@ export default function SidebarLayout({ children }) {
                 )}
             >
                 <div className="px-6 mb-8 flex items-center justify-between sticky top-0 bg-[#fffdfa] z-10 py-2">
-                    <Link href="/dashboard" className="flex items-center gap-2 text-[#001b12] font-bold text-2xl tracking-tight">
-                        <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#7CD142]">
+                    <Link href="/dashboard" className="flex items-center gap-2 text-[#001b12] font-extrabold text-3xl tracking-tight">
+                        <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#7CD142]">
                             <path d="M15 30 L30 80 L50 40 L70 80 L85 30" stroke="currentColor" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M15 30 C 10 15, 30 10, 50 15 C 70 20, 80 10, 85 30" stroke="currentColor" strokeWidth="3" strokeLinecap="round" fill="none" />
                             <path d="M85 30 C 95 10, 110 20, 95 45 L 88 65" stroke="currentColor" strokeWidth="10" strokeLinecap="round" />
@@ -93,7 +93,7 @@ export default function SidebarLayout({ children }) {
                                 <Link
                                     href={item.href || item.subItems[0].href}
                                     className={cn(
-                                        "flex items-center gap-3 px-3 py-2.5 rounded-[12px] transition-colors font-medium text-[15px] relative",
+                                        "flex items-center gap-3 px-3 py-3 rounded-[12px] transition-colors font-semibold text-[17px] relative",
                                         isActive && !hasSubItems
                                             ? "bg-[#e8f7ec] text-[#001b12]"
                                             : "text-[#4a5568] hover:bg-[#f3f4f6]"
@@ -115,7 +115,7 @@ export default function SidebarLayout({ children }) {
                                             const isSubActive = pathname.startsWith(sub.href);
                                             return (
                                                 <Link key={sub.name} href={sub.href} className={cn(
-                                                    "relative px-3 py-2 rounded-[8px] text-[14px] font-medium transition-colors flex items-center justify-between",
+                                                    "relative px-3 py-2.5 rounded-[8px] text-[16px] font-medium transition-colors flex items-center justify-between",
                                                     isSubActive ? "bg-[#e8f7ec] text-[#001b12]" : "text-[#4a5568] hover:bg-[#f3f4f6]"
                                                 )}>
                                                     <span>{sub.name}</span>
